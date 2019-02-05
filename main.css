@@ -23,27 +23,51 @@ header .content_center h1 {
 }
 
 header .content_center .image {
-    /* width: 420px; */
+    max-width: 420px;
     display: inline-block;
     vertical-align: middle;
     position: relative;
 }
 
+header .content_center .image:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0) contrast(1);
+}
+
 header .content_center .image .moldura {
-    width: 60%;
+    width: 190px;
     height: 100%;
     position: absolute;
-    border: 130px solid #fff;
+    border-left: 300px solid #fff;
+    border-right: 0px;
     border-top: 0px;
     border-bottom: 0px;
     top: 0;
     left: 0;
     z-index: 20;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
 }
+
+header .content_center .image .moldura:hover {
+    width: 190px;
+    height: 100%;
+    position: absolute;
+    border-top: 0px;
+    border-bottom: 0px;
+    top: 0;
+    left: 0%;
+    z-index: 20;
+}
+
+header .content_center .image .moldura:hover img {}
 
 header .content_center .image img {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
     position: relative;
     z-index: 10;
+    max-width: 100%;
 }

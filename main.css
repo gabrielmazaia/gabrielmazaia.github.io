@@ -20,6 +20,24 @@ header .content_center h1 {
     max-width: 345px;
     font-family: 'Roboto',sans-serif;
     font-weight: 400;
+    z-index: 200;
+}
+
+header .content_center h1 strong {
+    font-weight: 900;
+    text-transform: capitalize;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+header .content_center h1:hover strong:hover {
+    color: #845A91;
+}
+
+header .content_center h1:hover strong {
+    color: #A28FE8;
 }
 
 header .content_center .image {
@@ -29,37 +47,25 @@ header .content_center .image {
     position: relative;
 }
 
-header .content_center .image:hover img {
+header .content_center .image:hover img, header .content_center h1:hover ~ .image img, header .content_center .image:hover img {
     -webkit-filter: grayscale(0);
     filter: grayscale(0) contrast(1);
 }
 
-header .content_center .image .moldura {
-    width: 190px;
-    height: 100%;
-    position: absolute;
-    border-left: 300px solid #fff;
-    border-right: 0px;
-    border-top: 0px;
-    border-bottom: 0px;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    -webkit-transition: all ease-in-out 0.3s;
-    -moz-transition: all ease-in-out 0.3s;
-    -o-transition: all ease-in-out 0.3s;
-    transition: all ease-in-out 0.3s;
+header .content_center .image .moldura::before {width: 50%;height: 100%;position: absolute;display: block;left: 0%;background: #fff;z-index: 20;content: '';-webkit-transition: all ease-in-out 0.3s;}
+
+header .content_center .image:hover .moldura::before, header .content_center h1:hover ~ .image .moldura::before {
+    left: -50%;
 }
 
-header .content_center .image .moldura:hover {
-    width: 190px;
-    height: 100%;
-    position: absolute;
-    border-top: 0px;
-    border-bottom: 0px;
-    top: 0;
-    left: 0%;
-    z-index: 20;
+header .content_center .image:hover .moldura::after, header .content_center h1:hover ~ .image .moldura::after {
+    right: 0%;
+}
+
+header .content_center .image .moldura::after {width: 50%;height: 100%;position: absolute;display: block;right: -50%;background: #fff;z-index: 20;content: '';-webkit-transition: all ease-in-out 0.3s;}
+
+header .content_center .image:hover .moldura {
+
 }
 
 header .content_center .image .moldura:hover img {}

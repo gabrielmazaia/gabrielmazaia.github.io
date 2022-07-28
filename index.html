@@ -1,32 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Antonio Gabriel</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | QR code component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+    :root{
+      --white: hsl(0, 0%, 100%);
+      --lightgray: hsl(212, 45%, 89%);
+      --grayishblue: hsl(220, 15%, 55%);
+      --darkblue: hsl(218, 44%, 22%);
+      --bluesimple: hsl(212deg 45% 89%);
+      --font: 'Outfit', sans-serif;
+    }
+    body{
+      background: var(--bluesimple);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .qrcode-box{background: var(--white);max-width: 375px; display: block; margin: 120px auto; padding: 1rem; box-shadow: 0px 0px 30px var(--lightgray); border-radius: 20px;}
+    .qrcode-box--image{width: 100%;height: auto;position: relative;display: block; margin: auto; }
+    .qrcode-box--image img{width: 100%; border-radius: 15px;}
+    .qrcode-box-text--title{text-align: center; font-family: var(--font); color: var(--darkblue);}
+    .qrcode-box-text--paragraph{text-align: center; font-family: var(--font); color: var(--grayishblue);}
+  </style>
 </head>
 <body>
-    <header>
-        <div class="content_center">
-            <h1>Web <strong>Front-End</strong><br/>Antonio <strong>Gabriel</strong></h1>
-            <div class="image">
-                <div class="moldura"></div>
-                <img src="imagens/eu.jpg" alt="">
-            </div>
-        </div>
-    </header>
-    <section id="content_full">
-        <div class="content_center">
-            <h2>About <strong>Me</strong></h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium odio veniam possimus maxime doloribus recusandae, similique amet suscipit numquam exercitationem dicta laborum perspiciatis accusamus. Eveniet reprehenderit aliquam non omnis!</p>
-            <div class="rightabsolute">
-                
-            </div>
-        </div>
-    </section>
+  <div class="qrcode-box">
+    <div class="qrcode-box--image"><img src="images/image-qr-code.png" alt=""></div>
+    <div class="qrcode-box--text">
+      <h2 class="qrcode-box-text--title">Improve your front-end skills by building projects</h2>
+      <p class="qrcode-box-text--paragraph">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
+  </div>
+  
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mazaia Gabriel</a>.
+  </div>
 </body>
 </html>
